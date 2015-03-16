@@ -1,0 +1,86 @@
+body {
+  overflow: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: -50px;
+  left: -100px;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  background-image: url('../img/chalkboard.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200%;
+  height: 200%;
+  overflow: hidden;
+
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  
+  margin-right: 20px;
+  margin-left: 50px;
+  margin-top: 150px;
+}
+
+.content button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+header > h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: azure;
+}
+
+header > h1 { 
+  font-size: 162px;
+}
+
+header > h2 {
+  font-size: 102px;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 50px;
+  z-index: 9999;
+  
+  margin-bottom: 20px;
+  
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  color: azure;
+}
+
+footer h1 {
+  font-weight: 400;
+  font-size: 32px;
+}
+
+footer strong {
+  font-weight: 600;
+}
+
+.button-xlarge {
+  font-family: 'Oswald', sans-serif;
+  font-size: 500%;
+}
