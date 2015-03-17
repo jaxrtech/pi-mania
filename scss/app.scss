@@ -51,11 +51,11 @@ header {
   color: azure;
   
   h1 {
-    @include responsive-font(15);
+    @include responsive-font(15vw);
   }
   
   h2 {
-    @include responsive-font(10);
+    @include responsive-font(10vw);
   }
 }
 
@@ -70,7 +70,7 @@ footer {
   
   h1 {
     font-weight: 400;
-    @include responsive-font(4);
+    @include responsive-font(4vw);
   }
   
   strong {
@@ -80,5 +80,5 @@ footer {
 
 .button-xlarge {
   font-family: $font-oswald;
-  @include responsive-font(6);
+  @include responsive-font(6vw);
 }
