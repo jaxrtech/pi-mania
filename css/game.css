@@ -1,12 +1,12 @@
 header {
   margin-top: 1.25rem; }
   header h1 {
-    font-size: 7; }
+    font-size: 7vw; }
     @media screen and (min-width: 720px) {
       header h1 {
         font-size: 7vh; } }
   header h2 {
-    font-size: 6; }
+    font-size: 6vw; }
     @media screen and (min-width: 720px) {
       header h2 {
         font-size: 6vh; } }
@@ -22,7 +22,7 @@ header {
     padding-right: 5vw;
     margin-bottom: 3rem;
     text-align: center;
-    font-size: 6; }
+    font-size: 6vw; }
     @media screen and (min-width: 720px) {
       .game-container #question {
         font-size: 6vh; } }

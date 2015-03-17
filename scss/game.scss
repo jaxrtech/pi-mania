@@ -4,11 +4,11 @@ header {
   margin-top: 1.25rem;
   
   h1 {
-    @include responsive-font(7);
+    @include responsive-font(7vw);
   }
   
   h2 {
-    @include responsive-font(6);
+    @include responsive-font(6vw);
   }
 }
 
@@ -24,7 +24,7 @@ header {
     padding-right: $margin-left;
     margin-bottom: 3rem;
     text-align: center;
-    @include responsive-font(6);
+    @include responsive-font(6vw);
   }
 }
 
