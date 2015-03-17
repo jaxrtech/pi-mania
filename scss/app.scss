@@ -1,0 +1,101 @@
+@import "bourbon";
+
+$font-oswald: 'Oswald', sans-serif;
+$font-opensans: 'Open Sans', sans-serif;
+$break-large: 720px;
+$margin-left: 5vw;
+
+body {
+  overflow: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: rem(-50px);
+  left: rem(-100px);
+  right: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  
+  @include background-image(url('../img/chalkboard.jpg'));
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  @include filter(blur(15px));
+  
+  width: 200%;
+  height: 200%;
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  
+  margin-right: 2vw;
+  margin-left: $margin-left;
+  margin-top: 10vw;
+  
+  button {
+    margin-right: rem(10px);
+    margin-bottom: rem(10px);
+  }
+}
+
+header {
+  font-family: $font-oswald;
+  font-weight: 700;
+  color: azure;
+  margin-bottom: 50px;
+  
+  h1 {
+    font-size: 15vw;
+    
+    @media screen and (min-width: $break-large) {
+      font-size: 14vh;
+    }
+  }
+  
+  h2 {
+    font-size: 10vw;
+    
+    @media screen and (min-width: $break-large) {
+      font-size: 8vh;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: $margin-left;
+  z-index: 9999;
+  margin-bottom: 2vw;
+  font-family: $font-opensans;
+  font-style: italic;
+  color: azure;
+  
+  h1 {
+    font-weight: 400;
+    font-size: 4vw;
+    
+    @media screen and (min-width: $break-large) {
+      font-size: 3vh;
+    }
+  }
+  
+  strong {
+    font-weight: 600;
+  }
+}
+
+.button-xlarge {
+  font-family: $font-oswald;
+  font-size: 6vw;
+  
+  @media screen and (min-width: $break-large) {
+      font-size: 5vh;
+  }
+}

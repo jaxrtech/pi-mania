@@ -1,0 +1,74 @@
+body {
+  overflow: hidden; }
+
+.background-image {
+  position: fixed;
+  top: -3.125rem;
+  left: -6.25rem;
+  right: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  background-image: url('../img/chalkboard.jpg');
+  background-image: url('../img/chalkboard.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  width: 200%;
+  height: 200%; }
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-right: 2vw;
+  margin-left: 5vw;
+  margin-top: 10vw; }
+  .content button {
+    margin-right: 0.625rem;
+    margin-bottom: 0.625rem; }
+
+header {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: azure;
+  margin-bottom: 50px; }
+  header h1 {
+    font-size: 15vw; }
+    @media screen and (min-width: 720px) {
+      header h1 {
+        font-size: 14vh; } }
+  header h2 {
+    font-size: 10vw; }
+    @media screen and (min-width: 720px) {
+      header h2 {
+        font-size: 8vh; } }
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 5vw;
+  z-index: 9999;
+  margin-bottom: 2vw;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  color: azure; }
+  footer h1 {
+    font-weight: 400;
+    font-size: 4vw; }
+    @media screen and (min-width: 720px) {
+      footer h1 {
+        font-size: 3vh; } }
+  footer strong {
+    font-weight: 600; }
+
+.button-xlarge {
+  font-family: 'Oswald', sans-serif;
+  font-size: 6vw; }
+  @media screen and (min-width: 720px) {
+    .button-xlarge {
+      font-size: 5vh; } }
+
+/*# sourceMappingURL=app.css.map */
