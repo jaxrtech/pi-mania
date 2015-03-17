@@ -1,25 +1,5 @@
 @import "bourbon";
-
-$font-oswald: 'Oswald', sans-serif;
-$font-opensans: 'Open Sans', sans-serif;
-$break-large: 720px;
-$margin-left: 5vw;
-
-@mixin responsive-font($size) {
-  @if (unitless($size)) or (unit($size) != "vw")  {
-    @error "$size must in `vw` units."
-  }
-  
-  font-size: $size;
-
-  @media screen and (min-width: $break-large) {
-    font-size: $size * 1vh;
-  }
-}
-
-body {
-  overflow: hidden;
-}
+@import "common";
 
 .hidden {
   display: hidden;
@@ -27,10 +7,11 @@ body {
 
 .background-image {
   position: fixed;
+  overflow: hidden;
   top: rem(-50px);
   left: rem(-100px);
   right: 0;
-  z-index: 1;
+  z-index: -1;
   display: block;
   overflow: hidden;
   
@@ -48,11 +29,10 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  z-index: 9999;
   
-  margin-right: 2vw;
-  margin-left: $margin-left;
-  margin-top: 10vw;
+  #home-buttons {
+    margin-left: $margin-left;
+  }
   
   #home-buttons button {
     margin-right: rem(10px);
@@ -61,10 +41,14 @@ body {
 }
 
 header {
+  margin-bottom: 3vw;
+  margin-right: 2vw;
+  margin-left: $margin-left;
+  margin-top: 5vw;
+  
   font-family: $font-oswald;
   font-weight: 700;
   color: azure;
-  margin-bottom: 50px;
   
   h1 {
     @include responsive-font(15);
@@ -79,7 +63,6 @@ footer {
   position: absolute;
   bottom: 0px;
   left: $margin-left;
-  z-index: 9999;
   margin-bottom: 2vw;
   font-family: $font-opensans;
   font-style: italic;

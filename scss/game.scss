@@ -1,0 +1,37 @@
+@import "common";
+
+header {
+  margin-top: 1.25rem;
+  
+  h1 {
+    @include responsive-font(7);
+  }
+  
+  h2 {
+    @include responsive-font(6);
+  }
+}
+
+.game-container {
+  background-color: floralwhite;
+  height: 100%;
+  padding-left: $margin-left;
+  padding-right: $margin-left;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  
+  #question {
+    padding-right: $margin-left;
+    margin-bottom: 3rem;
+    text-align: center;
+    @include responsive-font(6);
+  }
+}
+
+.button-xlarge {
+  width: 97%;
+  height: 97%;
+  margin-bottom: 10px;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+}

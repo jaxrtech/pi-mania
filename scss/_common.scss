@@ -1,0 +1,16 @@
+$font-oswald: 'Oswald', sans-serif;
+$font-opensans: 'Open Sans', sans-serif;
+$break-large: 720px;
+$margin-left: 5vw;
+
+@mixin responsive-font($size) {
+  @if (unitless($size)) or (unit($size) != "vw")  {
+    @error "$size must in `vw` units."
+  }
+  
+  font-size: $size;
+
+  @media screen and (min-width: $break-large) {
+    font-size: $size * 1vh;
+  }
+}

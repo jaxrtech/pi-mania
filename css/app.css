@@ -1,15 +1,13 @@
-body {
-  overflow: hidden; }
-
 .hidden {
   display: hidden; }
 
 .background-image {
   position: fixed;
+  overflow: hidden;
   top: -3.125rem;
   left: -6.25rem;
   right: 0;
-  z-index: 1;
+  z-index: -1;
   display: block;
   overflow: hidden;
   background-image: url('../img/chalkboard.jpg');
@@ -24,20 +22,21 @@ body {
 .content {
   position: fixed;
   left: 0;
-  right: 0;
-  z-index: 9999;
-  margin-right: 2vw;
-  margin-left: 5vw;
-  margin-top: 10vw; }
+  right: 0; }
+  .content #home-buttons {
+    margin-left: 5vw; }
   .content #home-buttons button {
     margin-right: 0.625rem;
     margin-bottom: 0.625rem; }
 
 header {
+  margin-bottom: 3vw;
+  margin-right: 2vw;
+  margin-left: 5vw;
+  margin-top: 5vw;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
-  color: azure;
-  margin-bottom: 50px; }
+  color: azure; }
   header h1 {
     font-size: 15; }
     @media screen and (min-width: 720px) {
@@ -53,7 +52,6 @@ footer {
   position: absolute;
   bottom: 0px;
   left: 5vw;
-  z-index: 9999;
   margin-bottom: 2vw;
   font-family: 'Open Sans', sans-serif;
   font-style: italic;

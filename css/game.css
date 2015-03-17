@@ -1,0 +1,37 @@
+header {
+  margin-top: 1.25rem; }
+  header h1 {
+    font-size: 7; }
+    @media screen and (min-width: 720px) {
+      header h1 {
+        font-size: 7vh; } }
+  header h2 {
+    font-size: 6; }
+    @media screen and (min-width: 720px) {
+      header h2 {
+        font-size: 6vh; } }
+
+.game-container {
+  background-color: floralwhite;
+  height: 100%;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 45px;
+  padding-bottom: 45px; }
+  .game-container #question {
+    padding-right: 5vw;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 6; }
+    @media screen and (min-width: 720px) {
+      .game-container #question {
+        font-size: 6vh; } }
+
+.button-xlarge {
+  width: 97%;
+  height: 97%;
+  margin-bottom: 10px;
+  padding-top: 7vh;
+  padding-bottom: 7vh; }
+
+/*# sourceMappingURL=game.css.map */
