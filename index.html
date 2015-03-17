@@ -7,27 +7,43 @@
   
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400italic,600italic,400,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.js"></script>
+  
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/app.css">
-  <script src="js/script.js"></script>
+  
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="bower_components/vue/dist/vue.js"></script>
 </head>
   
 <body>
+  <div id="app">
   <div class="background-image"></div>
   
   <div class="content">
-    <header>
+    <header class="{{inGameMode ? 'game-mode' : ''}}">
       <h1>Unit Circle</h1>
       <h2>Mania</h2>
     </header>
     
-    <button class="button-xlarge pure-button">New Game</button>
-    <button class="button-xlarge pure-button">Join Game</button>
+    <div id="home-buttons">
+      <button v-on="click: onClick"
+              class="button-xlarge pure-button {{inGameMode ? 'hidden' : ''}}">
+        {{content}}
+      </button>
+    </div>
     
+    <div id="question">
+      {{{rawContent}}}
+    </div>
   </div>
 
   <footer>
     <h1>A <strong>Josh Bowden</strong> Production</h1>
   </footer>
+  </div>
+  
+  <script src="js/script.js"></script>
 </body>
 </html>

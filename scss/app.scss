@@ -5,8 +5,24 @@ $font-opensans: 'Open Sans', sans-serif;
 $break-large: 720px;
 $margin-left: 5vw;
 
+@mixin responsive-font($size) {
+  @if (unitless($size)) or (unit($size) != "vw")  {
+    @error "$size must in `vw` units."
+  }
+  
+  font-size: $size;
+
+  @media screen and (min-width: $break-large) {
+    font-size: $size * 1vh;
+  }
+}
+
 body {
   overflow: hidden;
+}
+
+.hidden {
+  display: hidden;
 }
 
 .background-image {
@@ -38,7 +54,7 @@ body {
   margin-left: $margin-left;
   margin-top: 10vw;
   
-  button {
+  #home-buttons button {
     margin-right: rem(10px);
     margin-bottom: rem(10px);
   }
@@ -51,19 +67,11 @@ header {
   margin-bottom: 50px;
   
   h1 {
-    font-size: 15vw;
-    
-    @media screen and (min-width: $break-large) {
-      font-size: 14vh;
-    }
+    @include responsive-font(15);
   }
   
   h2 {
-    font-size: 10vw;
-    
-    @media screen and (min-width: $break-large) {
-      font-size: 8vh;
-    }
+    @include responsive-font(10);
   }
 }
 
@@ -79,11 +87,7 @@ footer {
   
   h1 {
     font-weight: 400;
-    font-size: 4vw;
-    
-    @media screen and (min-width: $break-large) {
-      font-size: 3vh;
-    }
+    @include responsive-font(4);
   }
   
   strong {
@@ -93,9 +97,5 @@ footer {
 
 .button-xlarge {
   font-family: $font-oswald;
-  font-size: 6vw;
-  
-  @media screen and (min-width: $break-large) {
-      font-size: 5vh;
-  }
+  @include responsive-font(6);
 }
